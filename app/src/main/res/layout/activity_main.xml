@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:text="新型冠状病毒确诊患者行程查询"
+        android:text="新型冠状病毒确诊患者同程查询"
         android:textSize="25dp"/>
     <LinearLayout
         android:id="@+id/checiLine"
