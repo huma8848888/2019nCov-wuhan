@@ -1,18 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="新型冠状病毒确诊患者行程查询"
+        android:textSize="25dp"/>
+    <LinearLayout
+        android:id="@+id/checiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="车次:"
+            android:textSize="15dp"/>
+        <EditText
+            android:id="@+id/checiEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="输入车次或航班，例如：T123或AC111"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/timeLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日期:"
+            android:textSize="15dp"/>
+        <TextView
+            android:id="@+id/datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请点击此处以选择时间"
+            android:textSize="15dp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/resultContent"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:text="查询结果将会显示在这里" />
+    </ScrollView>
+</LinearLayout>
